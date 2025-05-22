@@ -1,0 +1,130 @@
+/* --- START OF FILE src/styles/Footer.css --- */
+.footer {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    background: #222;
+    color: #fff;
+}
+
+.footer-logo {
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Adjusted minmax */
+    column-gap: 30px;
+    row-gap: 40px;
+}
+
+.footer-column h3 {
+    margin-bottom: 28px;
+    font-size: 1.25rem; /* 20px */
+    font-weight: 600;
+}
+
+.footer-column p {
+    padding-bottom: 20px;
+    color: #999;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.footer-column hr {
+    border-color: #444;
+    margin-top: 10px; /* Added margin top */
+    margin-bottom: 20px;
+}
+
+.social-media-icons {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+.footer-column ul li {
+    margin: 0 0 12px 0; /* Increased bottom margin */
+}
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-size: 0.95rem;
+}
+.footer-column ul li a:hover {
+    color: #e2b71c;
+}
+
+
+.form-control-footer {
+    border-radius: 7px;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0.85rem 1rem; /* Adjusted padding */
+    line-height: 1.5;
+    background-color: #333; /* Darker background for inputs */
+    color: #eee;  
+    font-size: 15px;
+    border: 1px solid #555; /* Border for inputs */
+}
+.form-control-footer::placeholder {
+    color: #888;
+}
+.form-control-footer:focus {
+    outline: none;
+    border-color: #e2b71c;
+    background-color: #3a3a3a;
+}
+
+
+#user-message-footer {
+    min-height: 120px;
+    padding-top: 15px;
+}
+
+.blue_button_footer {
+    background-color: #003359;
+    cursor: pointer;
+    padding: 12px 35px;
+    font-size: 16px;
+    opacity: .9;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    transition: opacity 0.2s ease, background-color 0.2s ease;
+    font-weight: 500;
+}
+.blue_button_footer:hover {
+    opacity: 1;
+    background-color: #004a80;
+}
+
+.footer-divider {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border-color: #444;
+}
+.copyright-section {
+    text-align: center;
+    color: #999;
+    font-size: 0.9rem;
+}
+.copyright-section span {
+    padding: 0 10px;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-column {
+        margin-bottom: 30px;
+    }
+    .copyright-section span {
+        display: block;
+        padding: 5px 0;
+    }
+}
+/* --- END OF FILE src/styles/Footer.css --- */

@@ -1,0 +1,85 @@
+/* ======================= navbar style ============================================== */
+.mynavbar {
+    width: 100%;
+    background: rgba(238, 242, 245, 0.1); /* Default transparent-ish background */
+    padding: 10px 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.mynavbar.scrolled {
+    background: #fff;
+}
+
+.logo {
+    height: 100px;
+}
+
+.mynavbar ul {
+    display: flex;
+}
+
+.mynavbar li {
+    padding: 0px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff; /* Default color for nav items */
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.mynavbar #home { /* Home item always has its specific color */
+    color: rgb(255, 174, 0);
+}
+
+/* Styles for other nav items when scrolled */
+.mynavbar.scrolled li:not(#home) {
+    color: #000;
+}
+/* Alternatively, use the classes from JSX if preferred */
+.mynavbar li.nav-item-default {
+    color: #fff;
+}
+.mynavbar.scrolled li.nav-item-scrolled {
+    color: #000;
+}
+
+
+/* Responsive adjustments specific to Navbar */
+@media (max-width: 992px) {
+    .mynavbar {
+        padding: 10px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .mynavbar ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    .mynavbar li {
+        padding: 10px 0;
+        text-align: left;
+    }
+    .logo {
+        height: 80px;
+    }
+}
+@media (max-width: 1200px) {
+    .mynavbar {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+     .mynavbar {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

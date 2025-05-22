@@ -1,0 +1,79 @@
+/* ======================= header style ============================================== */
+.carousel-image { /* Targeting the img tag inside Carousel.Item */
+    height: 650px; /* Or use vh units for responsiveness, e.g., 80vh */
+    object-fit: cover;
+}
+
+.custom-carousel-caption { /* Targeting the Carousel.Caption */
+    /* text-start is a bootstrap class, ensure it's applied or replicate styles */
+    text-align: left !important;
+    left: 10% !important;  /* Use !important if Bootstrap styles are overriding */
+    bottom: 10% !important;
+    right: auto !important;
+    width: auto; /* Or a specific width like 60% */
+    max-width: 60%; /* Prevent text from becoming too wide */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3); /* Optional: slight background for readability */
+    border-radius: 5px; /* Optional */
+}
+
+.white_heading {
+    font-size: 68px;
+    font-weight: 700;
+    letter-spacing: -2.75px;
+    color: #fff;
+}
+
+.yellow_heading {
+    font-weight: bold;
+    font-size: 67px;
+    color: #e2b71c;
+}
+
+.paragraph {
+    font-size: 16px;
+    color: #f8f9fa;
+}
+
+.custom-carousel-caption h3 {
+    color: #ffc107;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+/* Responsive adjustments for Header */
+@media (max-width: 992px) {
+    .white_heading {
+        font-size: 50px;
+    }
+    .yellow_heading {
+        font-size: 48px;
+    }
+    .custom-carousel-caption {
+        left: 5% !important;
+        bottom: 5% !important;
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-image {
+        height: 70vh; /* Adjust height for smaller screens */
+    }
+    .white_heading {
+        font-size: 40px;
+    }
+    .yellow_heading {
+        font-size: 38px;
+    }
+    .paragraph {
+        font-size: 14px;
+    }
+    .custom-carousel-caption {
+        padding: 10px;
+        max-width: 90%;
+    }
+    .custom-carousel-caption h3 {
+        font-size: 1.1rem;
+    }
+}

@@ -1,0 +1,66 @@
+/* ======================= quantity style ============================================== */
+.quantity { /* Renamed from .countity for correct spelling */
+    padding-top: 80px;
+    padding-bottom: 140px;
+    /* height: 350px; -- Let content define height */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    justify-items: stretch; /* Default, can be removed */
+    column-gap: 30px;
+    row-gap: 30px;
+    color: #fff; /* Default text color for items in this section */
+    /* background-color: #f0f0f0; -- Remove if individual boxes have backgrounds */
+}
+
+.quantity-box { /* Generic style for all boxes */
+    min-height: 220px;
+    padding: 30px 40px; /* Adjusted padding */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px; /* Optional: Add rounding */
+}
+
+.quantity-icon {
+    margin-bottom: 20px; /* Space below icon */
+    max-height: 60px; /* Control icon size */
+}
+
+.quantity-box h2 {
+    font-size: 48px;
+    font-weight: 600;
+    color: #fff; /* Ensure color is white as per original */
+    margin-bottom: 8px;
+}
+
+.quantity-box p {
+    color: #fff; /* Ensure color is white as per original */
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* Specific box colors */
+.blue-box {
+    background-color: #003359;
+}
+
+.brown-box { /* Corrected spelling from 'brwon' */
+    background-color: #907C4B;
+    /* align-self: end; -- For grid items, this might be margin-top: auto or placing in grid differently */
+}
+
+/* Responsive adjustments for QuantitySection */
+@media (max-width: 768px) {
+    .quantity {
+        padding-top: 40px;
+        padding-bottom: 80px;
+    }
+     .quantity-box h2 {
+        font-size: 36px;
+    }
+    .quantity-box p {
+        font-size: 1rem;
+    }
+}

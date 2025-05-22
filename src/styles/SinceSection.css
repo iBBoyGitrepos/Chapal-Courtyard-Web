@@ -1,0 +1,83 @@
+/* ======================= since style ============================================== */
+.since {
+    border-bottom: 1px solid #ccc; /* Use a lighter color for border */
+    padding-top: 100px; /* Default padding, section-padding will override for L/R */
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Gap between text box and image */
+}
+
+.since_box {
+    /* height: 292px; -- Let content define height */
+    flex-basis: 60%; /* Give more space to the text content */
+    padding-right: 40px; /* Original padding */
+}
+
+.since_image_container { /* Changed from .since_image to avoid conflict with image tag */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically align items */
+    padding-bottom: 20px;
+    gap: 20px; /* Gap between year icon and heading */
+}
+
+.s_image {
+    height: 180px;
+    width: 220px;
+    background-image: url('../assets/SinceSection/year-icon.png'); /* Relative path from styles/ to assets/ */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+.s_image p {
+    margin: 5px 0;
+}
+.s_image h1 {
+    margin: 5px 0;
+    font-size: 2.5rem; /* Adjust as needed */
+}
+
+.since_image_container h2 {
+    padding: 0; /* Remove py-5 if not needed with flex alignment */
+    font-size: 1.8rem; /* Adjust as needed */
+}
+
+.since-building-img { /* Style for the actual building image */
+    height: 292px;
+    max-width: 35%; /* Control its width */
+    object-fit: cover;
+}
+
+/* Responsive adjustments for SinceSection */
+@media (max-width: 992px) {
+    .since {
+        flex-direction: column;
+        align-items: center;
+        padding-right: 0; /* Remove padding if stacked */
+    }
+    .since_box {
+        padding-right: 0;
+        margin-bottom: 20px;
+        text-align: center;
+        flex-basis: auto; /* Reset basis */
+    }
+    .since_image_container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .since_image_container h2 {
+        text-align: center;
+        padding-top: 20px;
+    }
+    .since-building-img {
+        max-width: 80%; /* Allow image to be wider when stacked */
+        height: auto; /* Maintain aspect ratio */
+    }
+}

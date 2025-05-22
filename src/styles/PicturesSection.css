@@ -1,0 +1,118 @@
+/* ======================= pictures style ============================================== */
+.pictures {
+    padding-top: 0; /* No top padding if banner is first element */
+}
+
+.banner-top {
+    /* background-image is set inline in JSX */
+    height: 300px;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    position: relative; /* For overlay */
+}
+
+.banner-top p { /* Specific to p within banner-top */
+    color: #999999;
+}
+
+.black-banner-overlay {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding-top: 70px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pic_holder {
+    /* padding for L/R is from section-padding */
+    padding-top: 60px; /* Keep original top padding */
+    padding-bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: stretch;
+    column-gap: 30px;
+    row-gap: 30px;
+    margin-top: -60px; /* For the overlap effect */
+    position: relative;
+    z-index: 1;
+}
+
+.pictur-item { /* Renamed from .pictur */
+    width: 100%;
+    min-height: 280px; /* Ensure minimum height for content visibility */
+    padding: 20px; /* General padding */
+    padding-top: 120px; /* More top padding to push content down */
+    box-shadow: inset 0 -100px 100px -40px rgba(28, 26, 26, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    border-radius: 8px; /* Optional: add some rounding */
+    overflow: hidden; /* If content might overflow rounded corners */
+}
+
+.pictur-item span {
+    font-weight: 300;
+}
+
+.pictur-item h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.btn-view-project { /* Renamed from .pictur button */
+    color: #fff;
+    font-size: 14px;
+    background: #003359;
+    border-radius: 10px;
+    padding: 8px 20px; /* Adjusted padding */
+    border: none;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.2s ease;
+}
+.btn-view-project:hover {
+    background: #004a80; /* Darker shade on hover */
+}
+
+/* Individual picture backgrounds */
+.pic1 { background-image: url('../assets/PicturesSection/courtyardnews1.webp'); }
+.pic2 { background-image: url('../assets/PicturesSection/img1news1.webp'); }
+.pic3 { background-image: url('../assets/PicturesSection/img19news (1).webp'); }
+.pic4 { background-image: url('../assets/PicturesSection/img19news.webp'); }
+.pic5 { background-image: url('../assets/PicturesSection/lux-villasnews1.webp'); }
+.pic6 { background-image: url('../assets/PicturesSection/skymarknews1.webp'); }
+
+.all-projects-button-container {
+    padding-bottom: 80px; /* Space at the bottom of the section */
+}
+.allprojecs {
+    padding: 19px 55px 20px;
+    color: #222;
+    border: 2px solid #222;
+    background-color: transparent;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.allprojecs:hover {
+    background-color: #222;
+    color: #fff;
+}
+
+/* Responsive adjustments for PicturesSection */
+@media (max-width: 992px) {
+    .pic_holder {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        margin-top: -30px;
+    }
+}

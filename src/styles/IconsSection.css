@@ -1,0 +1,56 @@
+/* ======================= icons style ============================================== */
+.icons {
+    padding-top: 100px; /* Default padding, section-padding will override for L/R */
+    padding-bottom: 100px; /* Add some bottom padding */
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Gap between icon items */
+}
+
+.icons_child {
+    /* height: 292px; -- Let content define height */
+    width: 30%; /* Adjust as needed, flex-grow: 1 can also be used */
+    display: flex;
+    gap: 15px; /* Gap between icon image and text content */
+    align-items: flex-start; /* Align items to the top */
+}
+
+.icon-image {
+    height: 70px;
+    width: 100px; /* Maintain original dimensions or make responsive */
+    object-fit: contain; /* Or cover, depending on image aspect ratio */
+    flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.icon-text-content h1 {
+    padding: 0 0 10px 0; /* Adjusted padding */
+    margin-bottom: 5px;
+    font: 700 22px / 1.2 Montserrat, sans-serif;
+    color: #222;
+}
+
+.icon-text-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Responsive adjustments for IconsSection */
+@media (max-width: 992px) {
+    .icons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .icons_child {
+        width: 80%; /* Wider on smaller screens when stacked */
+        margin-bottom: 30px; /* Space between stacked items */
+        flex-direction: column; /* Stack icon and text vertically */
+        text-align: center;
+        align-items: center; /* Center items when stacked vertically */
+    }
+    .icon-image {
+        margin-bottom: 15px; /* Space below icon when stacked */
+    }
+    .icon-text-content h1 {
+        padding: 10px 0;
+    }
+}
